@@ -1,0 +1,28 @@
+<h1>Hello World</h1>
+
+<ul>
+  <% @restaurants.each do |r| %>
+    <li>
+      <a href="restaurants/<%= r.id %>">
+        <%= r.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<!--  -->
+<!-- http://localhost:4567/hello?title=HOWGWARTS -->
+
+<form action="/restaurant" method="POST">
+  <label for="name"></label>
+  <input type="text" name="restaurant_name">
+
+  <label for="address"></label>
+  <input type="text" name="restaurant_address">
+
+  <input type="submit">
+</form>
+
+
